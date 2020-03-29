@@ -1,6 +1,4 @@
 # MusicFestival
-more info in read me
-
 Organizatorii unui festival de muzica au mai multe oficii în țară unde se vând bilete la festival. La fiecare oficiu
 se folosește un sistem soft pentru a vinde bilete. Persoana de la fiecare oficiu folosește o aplicație desktop cu
 următoarele funcționalități:
