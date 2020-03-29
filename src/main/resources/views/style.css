@@ -1,0 +1,20 @@
+.tab-header-background {
+    -fx-background-color: #5398D9;
+}
+.tab{
+    -fx-background-color: #F4E3B1;
+}
+.table-view .column-header{
+    -fx-background-color: #F4E3B1;
+}
+.table-view.column{
+    -fx-background-color: #F4E3B1;
+}
+.button{
+    -fx-background-color: #D96B0C;
+    -fx-font-color: #14325C;
+}
+.table-row-cell .text {
+    -fx-fill: #14325C;
+}
+
