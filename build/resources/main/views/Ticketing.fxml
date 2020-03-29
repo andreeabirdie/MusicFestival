@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="802.0" style="-fx-background-color: #14325C; -fx-border-color: #5398D9;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TicketingController">
+    <left>
+        <TableView fx:id="showsTable" prefHeight="410.0" prefWidth="509.0" style="-fx-background-color: #14325C;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn prefWidth="130.39999693632126" text="artist">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="artistName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="105.60000610351562" text="data">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="85.59996032714844" text="locul">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="venue" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="remainingTicketsColumn" prefWidth="81.60003662109375" text="bilete rămase">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="remainingTickets" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="soldTicketsColumn" minWidth="2.40008544921875" prefWidth="92.0" text="bilete vândute">
+                </TableColumn>
+            </columns>
+        </TableView>
+    </left>
+    <center>
+        <AnchorPane prefHeight="410.0" prefWidth="292.0" style="-fx-background-color: #14325C;" BorderPane.alignment="CENTER">
+            <children>
+                <Line endX="197.00003051757812" endY="-35.599998474121094" layoutX="121.0" layoutY="177.0" startX="-122.0000228881836" startY="-35.599998474121094" style="-fx-stroke: #F4E3B1;" />
+                <Text layoutX="29.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #F4E3B1;" text="nume cumpărător:" wrappingWidth="82.97930145263672" />
+                <Text layoutX="29.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #F4E3B1;" text="număr bilete:" wrappingWidth="82.97930145263672" />
+                <TextField fx:id="nameField" layoutX="122.0" layoutY="220.0" />
+                <Spinner fx:id="ticketSpinner" layoutX="122.0" layoutY="265.0" />
+                <Button layoutX="225.0" layoutY="318.0" mnemonicParsing="false" onAction="#buyTickets" text="rezervă" />
+                <Text layoutX="93.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #F4E3B1;" text="Caută spectacol" wrappingWidth="126.97948455810547">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="107.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #F4E3B1;" text="Rezervă bilet" wrappingWidth="103.77947235107422">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Button layoutX="226.0" layoutY="101.0" mnemonicParsing="false" onAction="#searchByDate" text="caută" />
+                <DatePicker fx:id="dateField" layoutX="120.0" layoutY="58.0" prefHeight="26.0" prefWidth="152.0" />
+                <Text layoutX="40.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #F4E3B1;" text="data:" wrappingWidth="29.37926483154297" />
+                <Text fx:id="warningTextSearch" layoutX="27.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #A53A3B;" wrappingWidth="186.13666534423828" />
+                <Button fx:id="logOut" layoutX="226.0" layoutY="370.0" mnemonicParsing="false" onAction="#logOut" text="log out" />
+                <Line endX="197.00003051757812" endY="-35.599998474121094" layoutX="122.0" layoutY="389.0" startX="-122.0000228881836" startY="-35.599998474121094" style="-fx-stroke: #F4E3B1;" />
+            <Text fx:id="warningTextBuy" layoutX="22.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #A53A3B;" wrappingWidth="179.73675537109375" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

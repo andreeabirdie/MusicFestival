@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="570.0" style="-fx-background-color: #14325C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewShowsController">
+<center>
+    <TableView fx:id="showsTable" prefHeight="326.0" prefWidth="555.0" style="-fx-background-color: #14325C;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn prefWidth="100.00003051757812" text="artist">
+                <cellValueFactory>
+                    <PropertyValueFactory property="artistName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="134.4000244140625" text="data">
+                <cellValueFactory>
+                    <PropertyValueFactory property="date" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="112.0" text="locul">
+                <cellValueFactory>
+                    <PropertyValueFactory property="venue" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="remainingTicketsColumn" prefWidth="102.4000244140625" text="bilete rămase">
+                <cellValueFactory>
+                    <PropertyValueFactory property="remainingTickets" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="soldTicketsColumn" minWidth="2.40008544921875" prefWidth="110.4000244140625" text="bilete vândute">
+            </TableColumn>
+        </columns>
+    </TableView>
+</center>
+   <bottom>
+      <AnchorPane prefHeight="73.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="495.0" layoutY="24.0" mnemonicParsing="false" onAction="#goBack" stylesheets="@style.css" text="close" />
+            <Text fx:id="warningText" layoutX="41.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #A53A3B;" wrappingWidth="401.33673095703125" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

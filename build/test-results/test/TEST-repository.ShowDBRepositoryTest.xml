@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="repository.ShowDBRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-19T18:33:08" hostname="Birdie" time="0.211">
+  <properties/>
+  <testcase name="findArtist" classname="repository.ShowDBRepositoryTest" time="0.211"/>
+  <system-out><![CDATA[2020-03-19 20:33:09 INFO  IShowRepository:23 - trying to connect to database ... 
+2020-03-19 20:33:09 INFO  IShowRepository:68 - findArtist
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
